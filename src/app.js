@@ -7,71 +7,108 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let form = document.querySelector("form");
+  let form = document.getElementById("form");
   form.addEventListener("submit", enviarDatos);
 
   function enviarDatos(e) {
     e.preventDefault();
-    //console.log("Datos enviados");
-  }
+    let card = document.getElementById("card");
+    let cvc = document.getElementById("cvc");
+    let amount = document.getElementById("amount");
+    let firstName = document.getElementById("firstName");
+    let lastName = document.getElementById("lastName");
+    let city = document.getElementById("city");
+    let state = document.getElementById("state");
+    let postalCode = document.getElementById("postalCode");
+    let message = document.getElementById("message");
+    let alert = document.getElementById("alert");
 
-  let cnumber = document.getElementById("cnumber").value;
-  let ccvc = document.getElementById("ccvc").value;
-  let validationServerUsername = document.getElementById(
-    "validationServerUsername"
-  ).value;
-  let inputFirstName = document.getElementById("inputFirstName").value;
-  let inputLastName = document.getElementById("inputLastName").value;
+    console.log(card.value);
+    console.log(cvc.value);
+    console.log(amount.value);
+    console.log(firstName.value);
+    console.log(lastName.value);
+    console.log(city.value);
+    console.log(state.value);
+    console.log(postalCode.value);
+    console.log(message.value);
+    console.log(alert);
 
-  let inputState = document.getElementById("inputState").value;
+    if (card.value === "") {
+      console.log("El campo card está vacio");
+      document.getElementById("card").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
 
-  let inputCity = document.getElementById("inputCity").value;
-  let inputZip = document.getElementById("inputZip").value;
-  let exampleFormControlTextarea1 = document.getElementById(
-    "exampleFormControlTextarea1"
-  ).value;
+    if (cvc.value === "") {
+      console.log("El campo cvc está vacio");
+      document.getElementById("cvc").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
+    if (amount.value === "") {
+      console.log("El campo amount está vacio");
+      document.getElementById("amount").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
+    if (firstName.value === "") {
+      console.log("El campo firstName está vacio");
+      document.getElementById("firstName").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
+    if (lastName.value === "") {
+      console.log("El campo lastname está vacio");
+      document.getElementById("lastName").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
 
-  console.log(cnumber.value);
-  console.log(ccvc.value);
-  console.log(validationServerUsername.value);
-  console.log(inputFirstName.value);
-  console.log(inputLastName.value);
-  console.log(inputState.value);
-  console.log(inputCity.value);
-  console.log(inputZip.value);
-  console.log(exampleFormControlTextarea1.value);
+    if (city.value === "") {
+      console.log("El campo city está vacio");
+      document.getElementById("city").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
+    if (state.value === "Choose...") {
+      console.log("El campo state está vacio");
+      document.getElementById("state").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
 
-  if (cnumber.value === "") {
-    document.getElementById("cnumber").style.background = "red";
-    document.getElementById("alert");
-  } else {
-    document.getElementById("alert");
+    if (postalCode.value === "") {
+      console.log("El campo postal code está vacio");
+      document.getElementById("postalCode").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
+
+    if (message.value === "") {
+      console.log("El campo message está vacio");
+      document.getElementById("message").style.background = "red";
+      //alert
+      document.getElementById("alert");
+    } else {
+      document.getElementById("alert").style.visibility = "hidden";
+    }
   }
 };
-
-// if (ccvc.value === "") {
-//   console.log("El campo ccvc esta vacio");
-// }
-// if (validationServerUsername.value === "") {
-//   console.log("El campo validationServerUsername esta vacio");
-// }
-// if (inputFirstName.value === "") {
-//   console.log("El campo inputFirstName esta vacio");
-// }
-// if (inputLastName.value === "") {
-//   console.log("El campo inputLastName esta vacio");
-// }
-// if (inputState.value === "") {
-//   console.log("El campo inputState esta vacio");
-// }
-// if (inputCity.value === "") {
-//   console.log("El campo inputCity esta vacio");
-// }
-// if (inputZip.value === "") {
-//   console.log("El campo inputZip esta vacio");
-// }
-// if (exampleFormControlTextarea1.value === "") {
-//   console.log("El campo exampleFormControlTextarea1 esta vacio");
-// } else {
-//   console.log("datos enviados");
-// }
